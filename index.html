@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <!-- Navbar -->
+        <div id="navbar"></div>
+    
+        <div class="player">
+            <!-- Left Column -->
+            <div class="meta">
+                <div class="cover">
+                    <img id="cover" src="assets/song1.jpg" alt="Cover">
+                </div>
+                <div class="track-title" id="title">Ethereal Dreams</div>
+                <div class="track-artist" id="artist">Aurora Sky</div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="controls">
+                <div class="big-controls">
+                    <button class="btn" id="prev"><i class="fa-solid fa-backward-step"></i></button>
+                    <button class="btn play-btn" id="play"><i id="play-icon" class="fa-solid fa-play"></i></button>
+                    <button class="btn" id="next"><i class="fa-solid fa-forward-step"></i></button>
+                </div>
+
+                <div class="progress">
+                    <div class="time" id="current">0:00</div>
+                    <input type="range" id="seek" class="seek" value="0" min="0" max="100">
+                    <div class="time" id="duration">0:00</div>
+                </div>
+
+                <div class="bottom-row">
+                    <div class="volume">
+                        <i class="fa-solid fa-volume-high" id="volume-icon"></i>
+                        <input type="range" id="volume" min="0" max="1" step="0.01" value="0.8">
+                    </div>
+                    <div class="bars" id="bars">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+
+                <div class="playlist" id="playlist"></div>
+            </div>
+        </div>
+        <audio id="audio"></audio>
+    </body>
+
+    <script src="index.js"></script>
+    <script src="components/loadComponents.js"></script>
+</html>
